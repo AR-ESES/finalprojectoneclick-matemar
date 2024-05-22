@@ -1,14 +1,3 @@
-/* eslint-disable require-yield, eqeqeq */
-
-import {
-  Sprite,
-  Trigger,
-  Watcher,
-  Costume,
-  Color,
-  Sound,
-} from "https://unpkg.com/leopard@^1/dist/index.esm.js";
-
 export default class Estrela extends Sprite {
   constructor(...args) {
     super(...args);
@@ -26,12 +15,12 @@ export default class Estrela extends Sprite {
     ];
 
     this.triggers = [
-      new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked),
-      new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked2),
+      new Trigger(Trigger.Botão_inicio, this.whenBotãoIniciolinhasClicked),
+      new Trigger(Trigger.Botão_inicio, this.whenBotãoIniciolinhasClicked),
     ];
   }
 
-  *whenGreenFlagClicked() {
+  *whenBotãoInicioLinhasClicked() {
     this.stage.vars.resultado = 0;
     this.goto(-188, 130);
     this.moveAhead();
@@ -75,7 +64,7 @@ export default class Estrela extends Sprite {
     }
   }
 
-  *whenGreenFlagClicked2() {
+  *whenBotãoInicioLinhasClicked() {
     yield* this.wait(34);
     yield* this.glide(2, -57, 32);
     /* TODO: Implement stop all */ null;
