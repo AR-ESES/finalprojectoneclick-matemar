@@ -1,14 +1,3 @@
-/* eslint-disable require-yield, eqeqeq */
-
-import {
-  Sprite,
-  Trigger,
-  Watcher,
-  Costume,
-  Color,
-  Sound,
-} from "https://unpkg.com/leopard@^1/dist/index.esm.js";
-
 export default class Anzol extends Sprite {
   constructor(...args) {
     super(...args);
@@ -20,11 +9,11 @@ export default class Anzol extends Sprite {
     this.sounds = [];
 
     this.triggers = [
-      new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked),
+      new Trigger(Trigger.BotãoInicioLinhas, this.whenBotãoInicioLinhasClicked),
     ];
   }
 
-  *whenGreenFlagClicked() {
+  *whenBotãoInicioLinhasClicked() {
     this.goto(15, 187);
     this.visible = false;
     yield* this.wait(1);
