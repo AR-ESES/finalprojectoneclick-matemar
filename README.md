@@ -24,7 +24,7 @@ O objetivo é fazer com que o aluno desenvolva uma maior capacidade na resoluç�
 [title](https://www.example.com)
 
 ### Jogo
-[MateMar](file:///C:/Users/b/Desktop/Design%20Multim%C3%A9dia%20maio2024/MateMar.html)
+[MateMar]()
 
 ### Image 	
 ![desenho do Asteroide](asteroid.png)
