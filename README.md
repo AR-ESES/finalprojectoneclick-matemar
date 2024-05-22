@@ -6,9 +6,6 @@ Trabalho realizado por Beatriz Catita nº220001368 e Joana Galvão nº220000873.
 O nosso jogo consiste num jogo de apenas uma tecla, onde o nosso personagem irá realizar apenas um movimento, que será subir e descer. 
 O objetivo é fazer com que o aluno desenvolva uma maior capacidade na resolução de contas e desenvolva uma maior perspicácia no decorrer de cada desafio matemático. O jogador deve deslocar o seu personagem até à resposta correta de cada conta, caso o jogador erre irá ouvir um som que lhe dirá que esse desafio não foi realizado de forma correta. O mesmo irá acontecer caso acerte a resposta.
 
-Bold 	**bold text**
-Italic 	*italicized text*
-Blockquote 	> blockquote
 ### Moodboard
 ![moodboard design](https://github.com/AR-ESES/finalprojectoneclick-matemar/assets/161735314/7232cee9-db1e-4425-aa5d-4e1918c5de67)
 ### Elementos
