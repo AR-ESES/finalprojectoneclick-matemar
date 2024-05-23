@@ -1,8 +1,4 @@
-export default class Anzol extends Sprite {
-  constructor(...args) {
-    super(...args);
-
-    this.costumes = [
+this.costumes = [
       new Costume("anzol", "./Anzol/costumes/anzol.png", { x: 480, y: 269.5 }),
     ];
 
