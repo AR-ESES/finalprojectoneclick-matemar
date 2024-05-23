@@ -1,8 +1,4 @@
-export default class Estrela extends Sprite {
-  constructor(...args) {
-    super(...args);
-
-    this.costumes = [
+this.costumes = [
       new Costume("ESTRELA", "./Estrela/costumes/ESTRELA.png", {
         x: 360,
         y: 360,
@@ -15,8 +11,8 @@ export default class Estrela extends Sprite {
     ];
 
     this.triggers = [
-      new Trigger(Trigger.Botão_inicio, this.whenBotãoIniciolinhasClicked),
-      new Trigger(Trigger.Botão_inicio, this.whenBotãoIniciolinhasClicked),
+      new Trigger(Trigger.BotãoInicioLinhas, this.whenBotãoInicioLinhasClicked),
+      new Trigger(Trigger.BotãoInicioLinhas, this.whenBotãoInicioLinhasClicked2),
     ];
   }
 
@@ -63,10 +59,3 @@ export default class Estrela extends Sprite {
       yield;
     }
   }
-
-  *whenBotãoInicioLinhasClicked() {
-    yield* this.wait(34);
-    yield* this.glide(2, -57, 32);
-    /* TODO: Implement stop all */ null;
-  }
-}
