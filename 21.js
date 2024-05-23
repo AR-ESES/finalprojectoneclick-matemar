@@ -8,11 +8,11 @@ this.costumes = [
     this.sounds = [];
 
     this.triggers = [
-      new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked),
+      new Trigger(Trigger.Botão_Inicio_linhas, this.whenBotão_Inicio_linhasClicked),
     ];
   }
 
-  *whenGreenFlagClicked() {
+  *whenBotão_Inicio_linhasClicked() {
     this.visible = false;
     this.goto(250, -30);
     yield* this.wait(2);
