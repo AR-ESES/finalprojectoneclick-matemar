@@ -1,49 +1,33 @@
-let spaceship;
-let meteorites1 = []; //obstacle Type 1 List, duplicate with different name if you want more
-let obstaclesCleared;
-let obstaclesHit;
+export default class Stage extends StageBase {
+  constructor(...args) {
+    super(...args);
 
-let frameCountBettwenObstaclesType1 = 20;
-let nivelDeDificuldade = 1;
+    this.costumes = [
+      new Costume("Cenário 1", "./Stage/costumes/Cenário 1.svg", {
+        x: 240,
+        y: 180,
+      }),
+    ];
 
-function setup() {
-  var canvas = createCanvas(800, 600);
-  spaceship = new Character();
+    this.sounds = [new Sound("Pop!", "./Stage/sounds/Pop!.wav")];
 
-  obstaclesCleared = 0;
-  obstaclesHit = 0;
+    this.triggers = [
+      new Trigger(Trigger.Botão_inicio_Linhas, this.whenBotão_inicio_LinhasClicked),
+      new Trigger(Trigger.Botão_inicio_Linhas, this.whenBotão_inicio_LinhasClicked2),
+    ];
 
-  meteorites1.push(new Obstacle());
-}
-
-function draw() {
-  clear();
-  background(0, 20, 50);
-
-  spaceship.show();
-  spaceship.update();
-
-  if (frameCount % frameCountBettwenObstaclesType1 == 0) {
-    meteorites1.push(new Obstacle());
+    this.vars.scroll = -1093;
+    this.vars.resultado = 0;
   }
 
-  for (var i = meteorites1.length - 1; i >= 0; i--) {
-    meteorites1[i].show();
-    meteorites1[i].update();
-
-    if (meteorites1[i].hits(spaceship)) {
-      obstaclesHit++;
-    }
-
-    if (meteorites1[i].offscreen()) {
-      meteorites1.splice(i, 1);
-      obstaclesCleared++;
-    }
+  *whenBotãoInicialLinhaClicked() {
+    this.vars.scroll = 0;
   }
-}
 
-function keyPressed() {
-  if (key === " ") {
-    spaceship.goUp();
+  *whenBotãoInicialLinhaClicked2() {
+    while (true) {
+      this.vars.scroll--;
+      yield;
+    }
   }
 }
