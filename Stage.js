@@ -12,8 +12,8 @@ export default class Stage extends StageBase {
     this.sounds = [new Sound("Pop!", "./Stage/sounds/Pop!.wav")];
 
     this.triggers = [
-      new Trigger(Trigger.BotãoInicialLinha, this.whenBotãoInicialLinhaClicked),
-      new Trigger(Trigger.BotãoInicialLinha, this.whenBotãoInicialLinhaClicked2),
+      new Trigger(Trigger.Botão_inicio_Linhas, this.whenBotão_inicio_LinhasClicked),
+      new Trigger(Trigger.Botão_inicio_Linhas, this.whenBotão_inicio_LinhasClicked2),
     ];
 
     this.vars.scroll = -1093;
